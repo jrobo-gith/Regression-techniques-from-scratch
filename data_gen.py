@@ -7,3 +7,7 @@ def noise(size, variance):
 def data(X, noise_variance):
     """Sinus function plus noise"""
     return 0.5 + np.sin(2 * np.pi * X) + noise(X.shape, noise_variance)
+
+def true_func(x_l, x_u):
+    X = np.linspace(x_l, x_u, 100)
+    return 0.5 + np.sin(2 * np.pi * X)
